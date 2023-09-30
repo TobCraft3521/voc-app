@@ -4,7 +4,11 @@ You can create, save and reopen custom vocab. sets or just use presets.
 You can even share he vocab. file on any platform and other people can open it.
 
 # Usage
-You can either run following command to host the react app locally:
+You can either run following commands to host the react app locally:
+
+```bash
+npm install
+```
 
 ```bash
 npm run start
