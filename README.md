@@ -17,4 +17,10 @@ npm run start
 and then view the app in the browser at localhost:8000
 or download one of the releases on GitHub, unzip it and open the index.html file.
 
+# Features
+- create, load and save datasets
+- edit datasets 
+- 2 way learning (language a to b and b to a)
+
+
 

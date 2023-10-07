@@ -7,9 +7,18 @@ import Edit from './Edit';
 
 function App() {
   //set = vocabulary data set
-  const [set, setSet] = useState({ a: [], b: [] })
+  const [set, setSet] = useState({
+    a: {
+      aller: "gehen",
+      venir: "kommen"
+    }, b: {}, title: "New set", imgs: {aller:"test"}
+  })
   const handleData = (data) => {
-    setSet(data)
+    setSet({ a: data, b: {}, imgs: {} })
+  }
+
+  const handleChange = (change) => {
+
   }
 
   return (
@@ -20,8 +29,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Start />} />
             <Route path="/open" element={<Start />} />
-            <Route path='/view' element={<View set={set} />} />
-            <Route path='/edit' element={<Edit onChange={handleData} set={set.a} />} />
+            <Route path='/view' element={<View set={set} title={set.title} />} />
+            <Route path='/edit' element={<Edit onChange={handleChange} set={set.a} imgs={set.imgs}/>} />
           </Routes>
         </div>
       </div>

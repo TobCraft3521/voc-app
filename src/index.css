@@ -73,19 +73,6 @@ a {
   color: var(--mid);
 }
 
-table {
-  width: 95vw;
-  max-width: 600px;
-  border-collapse: collapse;
-}
-
-tr:nth-child(even) {
-  background-color: #e6e6e6;
-}
-
-[contenteditable] { 
-  outline: 0px solid transparent; 
-} 
-td {
-  border: 1px solid;
+.ag-theme-alpine {
+  overflow-x: hidden;
 }
