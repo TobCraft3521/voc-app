@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-export function Navbar({ }) {
+export function Navbar() {
     return (
         <nav>
             <h1>Vocabulary app</h1>

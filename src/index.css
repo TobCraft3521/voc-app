@@ -21,13 +21,28 @@ body {
 }
 
 .button {
-  background-color: #00d9ff;
-  padding: 16px;
-  font-size: 32px;
+  background-color: #ff9900;
+  padding: 12px;
+  font-size: 16px;
   margin: 16px;
   border-radius: 16px;
   cursor: pointer;
   color: white;
+  max-width: 90vw;
+  width: 200px;
+  text-align: center;
+}
+
+.tablebutton {
+  background-color: #ff9900;
+  padding: 2px;
+  font-size: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  width: 50px;
+  text-align: center;
+  transform: translateX(5px);
 }
 
 .button a {
@@ -49,11 +64,28 @@ nav {
 }
 
 nav h1 {
-  color: #00d9ff;
+  color: #ff9900;
 }
 
 a {
   text-decoration: none;
   padding: 8px;
   color: var(--mid);
+}
+
+table {
+  width: 95vw;
+  max-width: 600px;
+  border-collapse: collapse;
+}
+
+tr:nth-child(even) {
+  background-color: #e6e6e6;
+}
+
+[contenteditable] { 
+  outline: 0px solid transparent; 
+} 
+td {
+  border: 1px solid;
 }

@@ -3,10 +3,11 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Navbar } from './Navbar';
 import { useState } from 'react';
 import View from './View';
+import Edit from './Edit';
 
 function App() {
   //set = vocabulary data set
-  const [set, setSet] = useState({})
+  const [set, setSet] = useState({ a: [], b: [] })
   const handleData = (data) => {
     setSet(data)
   }
@@ -19,7 +20,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Start />} />
             <Route path="/open" element={<Start />} />
-            <Route path='/view' element={<View />} />
+            <Route path='/view' element={<View set={set} />} />
+            <Route path='/edit' element={<Edit onChange={handleData} set={set.a} />} />
           </Routes>
         </div>
       </div>
