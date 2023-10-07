@@ -8,6 +8,7 @@ export function Navbar() {
                 <Link to="/">Start</Link>
                 <Link to="/open">Open</Link>
                 <Link to="/view">Create</Link>
+                <Link to="/view">View</Link>
             </div>
         </nav>
     )

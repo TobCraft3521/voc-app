@@ -7,14 +7,15 @@ export function Start({ handleData }) {
     return (
         <div>
             <h1>Start</h1>
-            <div className="button">
-                <Link to="/viewpresets">Load preset</Link>
+            <br />
+            <div className="button-85">
+                <Link style={{ color: "white" }} to="/viewpresets">Load preset</Link>
             </div>
-            <div className="button" onClick={handleOpenFile}>
+            <div className="button-85" onClick={handleOpenFile}>
                 Open from file
             </div>
-            <div className="button">
-                <Link to="/view">Create new set</Link>
+            <div className="button-85">
+                <Link style={{ color: "white" }} to="/view">Create new set</Link>
             </div>
         </div>
     )

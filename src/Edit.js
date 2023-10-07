@@ -3,15 +3,21 @@ import { AgGridReact } from "ag-grid-react";
 import "ag-grid-community/styles/ag-grid.css"
 import "ag-grid-community/styles/ag-theme-alpine.css"
 
-const Edit = ({ onChange, set, imgs }) => {
+const Edit = ({ onChange, set, imgs, title, description }) => {
     const handleAdd = (e) => {
         const newData = Object.create(rowData)
-        newData.push({languageA:"",languageB:"",imageURL:""})
+        newData.push({ languageA: "", languageB: "", imageURL: "" })
         setRowData(newData)
     }
 
     const handleChange = (e) => {
-        console.log(e.newValue, e.rowIndex)
+        //parse data
+        const newData = {}
+        rowData.forEach((data) => {
+            console.log(data)
+            newData[data.languageA] = data.languageB
+        })
+        onChange(newData, imgs, title, description)
     }
 
     const [rowData, setRowData] = useState([]);
@@ -41,7 +47,7 @@ const Edit = ({ onChange, set, imgs }) => {
             <div className="ag-theme-alpine" style={{ width: "min(601px,100vw)", height: "75vh" }}>
                 <AgGridReact rowData={rowData} columnDefs={columnDefs} onCellValueChanged={handleChange} />
             </div>
-            <div className="button" onClick={handleAdd}>Add entry</div>
+            <div className="button-85" style={{ width: "20vw" }} onClick={handleAdd}>Add entry</div>
         </div>
     );
 }
