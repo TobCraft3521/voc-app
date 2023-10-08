@@ -14,7 +14,6 @@ const View = ({ set, setSet }) => {
     }
 
     const handleSave = () => {
-        const content = JSON.stringify()
         download("test")
     }
 
