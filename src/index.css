@@ -71,7 +71,7 @@ nav h1 {
   background-clip: text;
   -webkit-background-clip: text;
   -moz-background-clip: text;
-  -webkit-text-fill-color: transparent; 
+  -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
 }
 
@@ -98,10 +98,6 @@ a {
   text-align: center;
   font-size: 17px;
   width: 150px;
-}
-
-.button-85:hover {
-  background: #333;
 }
 
 .button-85:before {
