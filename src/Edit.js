@@ -47,7 +47,10 @@ const Edit = ({ onChange, set, imgs, title, description }) => {
             <div className="ag-theme-alpine" style={{ width: "min(601px,100vw)", height: "75vh" }}>
                 <AgGridReact rowData={rowData} columnDefs={columnDefs} onCellValueChanged={handleChange} />
             </div>
-            <div className="button-85" style={{ margin:"20px" }} onClick={handleAdd}>Add entry</div>
+            <div style={{display:"flex"}}>
+                <div className="button-85" style={{ margin: "20px" , maxWidth:"13vw" }} onClick={handleAdd}>Back</div>
+                <div className="button-85" style={{ margin: "20px" , maxWidth:"13vw" }} onClick={handleAdd}>Add entry</div>
+            </div>
         </div>
     );
 }
